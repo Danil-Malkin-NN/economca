@@ -11,6 +11,7 @@ import ru.nn.dvm.core.repository.UserRepository;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.YearMonth;
 
 @Service
 public class EconomService {
@@ -39,10 +40,17 @@ public class EconomService {
 
     public int getAvailableMoneyForDeny(Long userId) {
         Target byUserId = targetRepository.findByUserId(userId);
-        long dayOfMonth = LocalDateTime.now()
+        LocalDateTime now = LocalDateTime.now();
+        YearMonth yearMonth = YearMonth.from(now);
+        int daysInMonth = yearMonth.lengthOfMonth();
+
+        long days = daysInMonth - LocalDateTime.now()
                 .getDayOfMonth();
+        if(days == 0){
+            return (int) byUserId.getResiduum();
+        }
         return BigDecimal.valueOf(byUserId.getResiduum())
-                .divide(BigDecimal.valueOf(dayOfMonth))
+                .divide(BigDecimal.valueOf(days))
                 .intValue();
 
     }

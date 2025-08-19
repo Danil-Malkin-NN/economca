@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="Написал">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/entity/Spending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/entity/Target.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/repository/SpendingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/repository/TargetRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" afterDir="false" />
+    <list default="true" id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755624887306</updated>
-      <workItem from="1755624889192" duration="3854000" />
+      <workItem from="1755624889192" duration="4263000" />
     </task>
     <task id="LOCAL-00002" summary="Теперь проект собирается">
       <option name="closed" value="true" />
@@ -149,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755626167605</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Первое приближение как то, что-то)">
+      <option name="closed" value="true" />
+      <created>1755628908127</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755628908127</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +153,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="Теперь проект собирается" />
-    <option name="LAST_COMMIT_MESSAGE" value="Теперь проект собирается" />
+    <MESSAGE value="Написал" />
+    <MESSAGE value="Первое приближение как то, что-то)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Первое приближение как то, что-то)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

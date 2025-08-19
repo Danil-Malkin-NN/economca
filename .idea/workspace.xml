@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/BlackCubeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/test/java/ru/nn/dvm/core/service/BlackCubeServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +36,7 @@
         <option value="UML Activity" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -67,6 +71,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultPlantUmlFileTemplate": "UML Activity",
+    "JUnit.BlackCubeServiceTest.test.executor": "Run",
     "Maven.core [clean,install].executor": "Run",
     "Maven.economca [clean,install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -75,6 +80,8 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.CoreApplication.executor": "Debug",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "G:/Kotlin/init/economca",
@@ -89,11 +96,33 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Kotlin\init\economca" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.nn.dvm.core.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.nn.dvm.core.repository" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BlackCubeServiceTest.test">
+    <configuration name="BlackCubeServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.nn.dvm.core.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.nn.dvm.core.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.nn.dvm.core.service.BlackCubeServiceTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="core" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.nn.dvm.core.CoreApplication" />
@@ -101,6 +130,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BlackCubeServiceTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -126,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755624887306</updated>
-      <workItem from="1755624889192" duration="4263000" />
+      <workItem from="1755624889192" duration="4930000" />
     </task>
     <task id="LOCAL-00002" summary="Теперь проект собирается">
       <option name="closed" value="true" />
@@ -144,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755628908127</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Чуть изменил логику подсчёта средней траты">
+      <option name="closed" value="true" />
+      <created>1755629326596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1755629326596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +197,8 @@
     <MESSAGE value="Теперь проект собирается" />
     <MESSAGE value="Написал" />
     <MESSAGE value="Первое приближение как то, что-то)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Первое приближение как то, что-то)" />
+    <MESSAGE value="Чуть изменил логику подсчёта средней траты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Чуть изменил логику подсчёта средней траты" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

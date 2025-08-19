@@ -17,15 +17,17 @@ import java.time.YearMonth;
 public class EconomService {
 
     public EconomService(SpendingRepository spendingRepository, TargetRepository targetRepository,
-                         UserRepository userRepository) {
+                         UserRepository userRepository, BlackCubeService blackCubeService) {
         this.spendingRepository = spendingRepository;
         this.targetRepository = targetRepository;
         this.userRepository = userRepository;
+        this.blackCubeService = blackCubeService;
     }
 
     private final SpendingRepository spendingRepository;
     private final TargetRepository targetRepository;
     private final UserRepository userRepository;
+    private final BlackCubeService blackCubeService;
 
     public void registerUser(String telegramId) {
         userRepository.save(new User(telegramId));
@@ -40,20 +42,10 @@ public class EconomService {
 
     public int getAvailableMoneyForDeny(Long userId) {
         Target byUserId = targetRepository.findByUserId(userId);
-        LocalDateTime now = LocalDateTime.now();
-        YearMonth yearMonth = YearMonth.from(now);
-        int daysInMonth = yearMonth.lengthOfMonth();
-
-        long days = daysInMonth - LocalDateTime.now()
-                .getDayOfMonth();
-        if(days == 0){
-            return (int) byUserId.getResiduum();
-        }
-        return BigDecimal.valueOf(byUserId.getResiduum())
-                .divide(BigDecimal.valueOf(days))
-                .intValue();
+        return blackCubeService.getManeyForDay(byUserId);
 
     }
+
 
     @Transactional
     public long addSpending(Long userId, long amount) {

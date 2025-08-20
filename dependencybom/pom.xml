@@ -15,4 +15,18 @@
     <name>dependencybom</name>
     <description>dependencybom</description>
 
+    <properties>
+        <telegrambots.version>6.9.7.1</telegrambots.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.telegram</groupId>
+                <artifactId>telegrambots</artifactId>
+                <version>${telegrambots.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 </project>

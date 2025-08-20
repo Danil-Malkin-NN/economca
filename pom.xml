@@ -19,6 +19,7 @@
     <modules>
         <module>dependencybom</module>
         <module>core</module>
+        <module>telegram-api</module>
     </modules>
 
 

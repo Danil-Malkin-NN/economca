@@ -1,9 +1,10 @@
 package ru.nn.dvm.telegram.api.service;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.Update;
 
 public interface StepService {
 
-	public SendMessage sendMessage(String chatId, String text);
+	SendMessage process(Update update);
 
 }

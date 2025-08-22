@@ -17,7 +17,7 @@ public class Target {
     private long residuum;
 
     @OneToOne
-    private User user;
+    private TgUser tgUser;
 
     public Target(long target, long residuum) {
         this.target = target;

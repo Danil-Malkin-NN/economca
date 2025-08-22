@@ -11,36 +11,37 @@ import ru.nn.dvm.core.service.EconomService;
 
 import java.util.ArrayList;
 
-@Service
+@Service(value = "/start")
 @RequiredArgsConstructor
-public class StartStep {
+public class StartStep implements StepService {
 
-	private EconomService service;
+    private final EconomService service;
 
-	private final String textMessage = """
-			Рад тебя приветствовать, %USER_NAME%, я бот экономка.
-			Я могу помочь тебе поставить бюджет на месяц и корректировать свои траты день ото дня, в зависимости от размера.
-			Готовы задать цель?
-			""";
+    private final String textMessage = """
+            Рад тебя приветствовать, %USER_NAME%, я бот экономка.
+            Я могу помочь тебе поставить бюджет на месяц и корректировать свои траты день ото дня, в зависимости от размера.
+            Готовы задать цель?
+            """;
 
-	private SendMessage start(Update update) {
+    @Override
+    public SendMessage process(Update update) {
 
-		Message message = update.getMessage();
-		User from = message.getFrom();
-		service.registerUser(from.getId(), from.getUserName());
+        Message message = update.getMessage();
+        User from = message.getFrom();
+        service.registerUser(from.getId(), from.getUserName());
 
-		SendMessage answer = new SendMessage();
-		answer.setText(textMessage.replace("%USER_NAME%", from.getUserName()));
-		//TODO NPE!!!
-		answer.setChatId(update.getMessage()
-								 .getChatId());
-		answer.enableHtml(true);
+        SendMessage answer = new SendMessage();
+        answer.setText(textMessage.replace("%USER_NAME%", from.getUserName()));
+        //TODO NPE!!!
+        answer.setChatId(update.getMessage()
+                                 .getChatId());
+        answer.enableHtml(true);
 
-		InlineKeyboardMarkup replyMarkup = new InlineKeyboardMarkup();
-		//TODO тут можно добавлять кнопки к сообщениям.
-		replyMarkup.setKeyboard(new ArrayList<>());
-		answer.setReplyMarkup(replyMarkup);
-		return answer;
-	}
+        InlineKeyboardMarkup replyMarkup = new InlineKeyboardMarkup();
+        //TODO тут можно добавлять кнопки к сообщениям.
+        replyMarkup.setKeyboard(new ArrayList<>());
+        answer.setReplyMarkup(replyMarkup);
+        return answer;
+    }
 
 }

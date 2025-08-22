@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class User {
+public class TgUser {
 
     @Id
     @GeneratedValue
@@ -19,12 +19,12 @@ public class User {
     @OneToOne
     private Target target;
 
-    public User(Long telegramId, String userName) {
+    public TgUser(Long telegramId, String userName) {
         this.telegramId = telegramId;
         this.userName = userName;
     }
 
-    public User() {
+    public TgUser() {
 
     }
 

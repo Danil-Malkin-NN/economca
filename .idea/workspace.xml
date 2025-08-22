@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/BysnesLogicService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StartStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram-api/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/enumiration/MessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/TelegramApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/TelegramApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/bot/TgBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/bot/TgBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StartStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StartStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,15 +60,15 @@
     &quot;assignee&quot;: &quot;Danil-Malkin-NN&quot;
   }
 }</component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{
-  "editorReviewEnabled": false
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Danil-Malkin-NN/economca.git",
-    "accountId": "3234c050-f888-4be0-a076-b331cdf12101"
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;editorReviewEnabled&quot;: false
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Danil-Malkin-NN/economca.git&quot;,
+    &quot;accountId&quot;: &quot;3234c050-f888-4be0-a076-b331cdf12101&quot;
   }
-}]]></component>
+}</component>
   <component name="GitlabMajeraCodeReviewSettings">
     <option name="popularEmojiShortcuts">
       <list />
@@ -80,14 +77,15 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="31W1CRsqSLd8HhBKBDG8MuDiABT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -96,6 +94,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultPlantUmlFileTemplate": "UML Activity",
+    "Docker.telegram-api/compose.yaml.postgres: Compose Deployment.executor": "Run",
     "JUnit.BlackCubeServiceTest.test.executor": "Run",
     "Maven.core [clean,install].executor": "Run",
     "Maven.economca [clean,install].executor": "Run",
@@ -111,16 +110,22 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "BysnessLogic",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/Kotlin/init/economca",
+    "last_opened_file_path": "G:/Kotlin/init/economca/telegram-api",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Kotlin\init\economca\telegram-api" />
       <recent name="G:\Kotlin\init\economca" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -134,6 +139,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TelegramApiApplication">
+    <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
+      <option name="passParentEnvironments" value="true" />
+      <option name="workspaceLocation" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LiferayServerConfiguration" factoryName="Liferay Server">
+      <Liferay-Sever alternativeJrePath="" bundleLocation="" bundleType="" developerMode="true" gogoShellPort="11311" vmParameters="-Xmx2560m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m">
+        <envs>
+          <env name="PATH" value="$USER_HOME$/.jdks/liberica-21.0.7/bin:C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\WireGuard\;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\dvmalkin\AppData\Local\Programs\Python\Launcher\;C:\Users\dvmalkin\AppData\Local\Microsoft\WindowsApps;C:\Users\dvmalkin\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\dvmalkin\AppData\Local\Programs\Git\cmd;C:\Users\dvmalkin\AppData\Local\Programs\Lens\resources\cli\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\dvmalkin\.jdks\liberica-1.8.0_432;;C:\Users\dvmalkin\.jdks\liberica-17.0.8.1\liberica-1.8.0_432\bin;C:\Users\dvmalkin\.jdks\liberica-17.0.8.1\bin;" />
+          <env name="JAVA_HOME" value="$USER_HOME$/.jdks/liberica-21.0.7" />
+        </envs>
+        <module name="telegram-api" />
+      </Liferay-Sever>
+      <method v="2" />
+    </configuration>
     <configuration name="BlackCubeServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="core" />
       <extension name="coverage">
@@ -149,21 +169,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="LiferayDockerServerConfiguration" factoryName="Liferay Docker Server">
-      <option name="passParentEnvironments" value="true" />
-      <option name="workspaceLocation" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="LiferayServerConfiguration" factoryName="Liferay Server">
-      <Liferay-Sever alternativeJrePath="" bundleLocation="" bundleType="" developerMode="true" gogoShellPort="11311" vmParameters="-Xmx2560m -XX:MaxMetaspaceSize=768m -XX:MetaspaceSize=768m">
-        <envs>
-          <env name="PATH" value="$USER_HOME$/.jdks/liberica-21.0.7/bin:C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\WireGuard\;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\dvmalkin\AppData\Local\Programs\Python\Launcher\;C:\Users\dvmalkin\AppData\Local\Microsoft\WindowsApps;C:\Users\dvmalkin\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\dvmalkin\AppData\Local\Programs\Git\cmd;C:\Users\dvmalkin\AppData\Local\Programs\Lens\resources\cli\bin;C:\Program Files (x86)\HP\Common\HPDestPlgIn\;C:\Users\dvmalkin\.jdks\liberica-1.8.0_432;;C:\Users\dvmalkin\.jdks\liberica-17.0.8.1\liberica-1.8.0_432\bin;C:\Users\dvmalkin\.jdks\liberica-17.0.8.1\bin;" />
-          <env name="JAVA_HOME" value="$USER_HOME$/.jdks/liberica-21.0.7" />
-        </envs>
-        <module name="telegram-api" />
-      </Liferay-Sever>
-      <method v="2" />
     </configuration>
     <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="core" />
@@ -185,9 +190,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="telegram-api/compose.yaml.postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="postgres" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="telegram-api/compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.TelegramApiApplication" />
+        <item itemvalue="Docker.telegram-api/compose.yaml.postgres: Compose Deployment" />
         <item itemvalue="JUnit.BlackCubeServiceTest.test" />
       </list>
     </recent_temporary>
@@ -243,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755629326596</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Чуть изменил логику подсчёта средней траты">
+      <option name="closed" value="true" />
+      <created>1755850725258</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755850725258</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,8 +304,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/bot/TgBot.java</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/BysnesLogicService.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/BysnesLogicService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -19,7 +19,7 @@ public class Spending {
     private LocalDateTime date;
 
     @ManyToOne
-    private User user;
+    private TgUser tgUser;
 
     public Spending() {
 

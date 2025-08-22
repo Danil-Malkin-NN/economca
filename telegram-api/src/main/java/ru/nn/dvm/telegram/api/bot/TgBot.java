@@ -22,9 +22,10 @@ public class TgBot extends TelegramLongPollingBot {
     private final BotProperty property;
     private final BysnesLogicService service;
 
-    public TgBot(BotProperty property) {
+    public TgBot(BotProperty property, BysnesLogicService service) {
         super(property.getToken());
         this.property = property;
+        this.service = service;
     }
 
     @Override

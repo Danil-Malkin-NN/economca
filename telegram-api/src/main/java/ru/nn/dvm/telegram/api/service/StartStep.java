@@ -1,5 +1,6 @@
 package ru.nn.dvm.telegram.api.service;
 
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -7,9 +8,11 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import ru.nn.dvm.core.service.EconomService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service(value = "/start")
 @RequiredArgsConstructor
@@ -39,9 +42,19 @@ public class StartStep implements StepService {
 
         InlineKeyboardMarkup replyMarkup = new InlineKeyboardMarkup();
         //TODO тут можно добавлять кнопки к сообщениям.
-        replyMarkup.setKeyboard(new ArrayList<>());
+        replyMarkup.setKeyboard(getNextStepsButtons());
         answer.setReplyMarkup(replyMarkup);
         return answer;
+    }
+
+    private @NonNull List<List<InlineKeyboardButton>> getNextStepsButtons() {
+        List<List<InlineKeyboardButton>> buttons = new ArrayList<>();
+        List<InlineKeyboardButton> button1 = new ArrayList<>();
+        buttons.add(button1);
+        InlineKeyboardButton button = new InlineKeyboardButton("Добавить цель");
+        button.setCallbackData("/add_target");
+        button1.add(button);
+        return buttons;
     }
 
 }

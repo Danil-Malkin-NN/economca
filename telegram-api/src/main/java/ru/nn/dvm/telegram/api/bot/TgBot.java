@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.nn.dvm.telegram.api.config.BotProperty;
+import ru.nn.dvm.telegram.api.service.BysnesLogicService;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class TgBot extends TelegramLongPollingBot {
 
     private final BotProperty property;
+    private final BysnesLogicService service;
 
     public TgBot(BotProperty property) {
         super(property.getToken());
@@ -31,16 +33,8 @@ public class TgBot extends TelegramLongPollingBot {
         log.info("Update: {}", update);
         log.info("End handling update with id: {}", update.getUpdateId());
 
-        SendMessage message = new SendMessage();
-        message.setText("Hello world");
-        //TODO NPE!!!
-        message.setChatId(update.getMessage().getChatId());
-        message.enableHtml(true);
 
-        InlineKeyboardMarkup replyMarkup = new InlineKeyboardMarkup();
-        //TODO тут можно добавлять кнопки к сообщениям.
-        replyMarkup.setKeyboard(new ArrayList<>());
-        message.setReplyMarkup(replyMarkup);
+        SendMessage message = service.processAction(update);
 
         sendMessage(message);
     }

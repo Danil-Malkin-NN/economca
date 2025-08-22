@@ -29,8 +29,8 @@ public class EconomService {
     private final UserRepository userRepository;
     private final BlackCubeService blackCubeService;
 
-    public void registerUser(String telegramId) {
-        userRepository.save(new User(telegramId));
+    public void registerUser(Long telegramId, String username) {
+        userRepository.save(new User(telegramId, username));
     }
 
     public void creteTarget(Long userId, Long amount) {

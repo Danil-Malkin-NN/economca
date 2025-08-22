@@ -12,17 +12,28 @@ public class User {
     @GeneratedValue
     private Long id;
 
-    private String telegramId;
+    private Long telegramId;
+
+    private String userName;
 
     @OneToOne
     private Target target;
 
-    public User(String telegramId) {
+    public User(Long telegramId, String userName) {
         this.telegramId = telegramId;
+        this.userName = userName;
     }
 
     public User() {
 
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Target getTarget() {
@@ -41,11 +52,11 @@ public class User {
         this.id = id;
     }
 
-    public String getTelegramId() {
+    public Long getTelegramId() {
         return telegramId;
     }
 
-    public void setTelegramId(String telegramId) {
+    public void setTelegramId(Long telegramId) {
         this.telegramId = telegramId;
     }
 }

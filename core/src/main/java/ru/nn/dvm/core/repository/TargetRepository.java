@@ -7,6 +7,6 @@ import ru.nn.dvm.core.entity.Target;
 @Repository
 public interface TargetRepository extends JpaRepository<Target, Long> {
 
-    Target findByUserId(Long userId);
+    Target findByTgUserId(Long userId);
 
 }

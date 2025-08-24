@@ -1,28 +1,40 @@
 package ru.nn.dvm.core.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class User {
+public class TgUser {
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String telegramId;
+    private Long telegramId;
 
-    @OneToOne
+    private String userName;
+
+    @OneToOne(cascade = CascadeType.ALL)
     private Target target;
 
-    public User(String telegramId) {
+    public TgUser(Long telegramId, String userName) {
         this.telegramId = telegramId;
+        this.userName = userName;
     }
 
-    public User() {
+    public TgUser() {
 
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Target getTarget() {
@@ -41,11 +53,11 @@ public class User {
         this.id = id;
     }
 
-    public String getTelegramId() {
+    public Long getTelegramId() {
         return telegramId;
     }
 
-    public void setTelegramId(String telegramId) {
+    public void setTelegramId(Long telegramId) {
         this.telegramId = telegramId;
     }
 }

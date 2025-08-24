@@ -1,3 +1,12 @@
 bot:
-  name: ${BOT_NAME}
-  token: ${BOT_TOKEN}
+  name: ${BOT_NAME:economka}
+  token: ${BOT_TOKEN:8320437220:AAHagPcX66h7-k33IAb5zfw1GjXbK3cXrPE}
+
+spring:
+  docker:
+    compose:
+      file: ./compose.yaml
+
+  jpa:
+    hibernate:
+      ddl-auto: update

@@ -4,64 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/BlackCubeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/ru/nn/dvm/core/service/BlackCubeServiceTest.java" afterDir="false" />
+    <list default="true" id="2187ca09-a5b4-4983-87d0-9483faf04762" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/steps/TargetMoneyStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/ru/nn/dvm/core/service/EconomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/BysnesLogicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/BysnesLogicService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/SetupTargetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/steps/SetupTargetStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StartStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/steps/StartStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/steps/StepService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$/core">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="UML Activity" />
-        <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Danil-Malkin-NN&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Danil-Malkin-NN"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Danil-Malkin-NN/economca.git&quot;,
-    &quot;accountId&quot;: &quot;31df57db-f025-4a8b-8ff2-9161a40d14b6&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Danil-Malkin-NN/economca.git",
+    "accountId": "31df57db-f025-4a8b-8ff2-9161a40d14b6"
   }
-}</component>
+}]]></component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
+  "associatedIndex": 6
 }]]></component>
-  <component name="ProjectId" id="31W1CRsqSLd8HhBKBDG8MuDiABT" />
+  <component name="ProjectId" id="31j2dmZX0iAtAnZsgg8OeQThzIV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -70,21 +57,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Activity",
-    "JUnit.BlackCubeServiceTest.test.executor": "Run",
-    "Maven.core [clean,install].executor": "Run",
-    "Maven.economca [clean,install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.CoreApplication.executor": "Debug",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
+    "Spring Boot.TelegramApiApplication.executor": "Debug",
+    "git-widget-placeholder": "BysnessLogic",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "G:/Kotlin/init/economca",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -93,46 +73,27 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Kotlin\init\economca" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="ru.nn.dvm.core.service" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.nn.dvm.core.repository" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.nn.dvm.telegram.api.service.steps" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BlackCubeServiceTest.test">
-    <configuration name="BlackCubeServiceTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="core" />
+  <component name="RunManager">
+    <configuration name="TelegramApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="telegram-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.nn.dvm.telegram.api.TelegramApiApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.nn.dvm.core.service.*" />
+          <option name="PATTERN" value="ru.nn.dvm.telegram.api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.nn.dvm.core.service" />
-      <option name="MAIN_CLASS_NAME" value="ru.nn.dvm.core.service.BlackCubeServiceTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="core" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.nn.dvm.core.CoreApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BlackCubeServiceTest.test" />
+        <item itemvalue="Spring Boot.TelegramApiApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -146,62 +107,41 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="Init commit">
+    <task id="LOCAL-00001" summary="Добавил шаги по заданию цели">
       <option name="closed" value="true" />
-      <created>1755545514202</created>
+      <created>1755854681967</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1755545514202</updated>
+      <updated>1755854681968</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="94194a26-b464-4dad-850f-bf0eb654f545" name="Changes" comment="" />
-      <created>1755624887306</created>
+      <changelist id="2187ca09-a5b4-4983-87d0-9483faf04762" name="Changes" comment="" />
+      <created>1756023252858</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1755624887306</updated>
-      <workItem from="1755624889192" duration="4930000" />
+      <updated>1756023252858</updated>
+      <workItem from="1756023254064" duration="1236000" />
     </task>
-    <task id="LOCAL-00002" summary="Теперь проект собирается">
-      <option name="closed" value="true" />
-      <created>1755626167605</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1755626167605</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Первое приближение как то, что-то)">
-      <option name="closed" value="true" />
-      <created>1755628908127</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1755628908127</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Чуть изменил логику подсчёта средней траты">
-      <option name="closed" value="true" />
-      <created>1755629326596</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1755629326596</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init commit" />
-    <MESSAGE value="Теперь проект собирается" />
-    <MESSAGE value="Написал" />
-    <MESSAGE value="Первое приближение как то, что-то)" />
-    <MESSAGE value="Чуть изменил логику подсчёта средней траты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Чуть изменил логику подсчёта средней траты" />
+    <MESSAGE value="Добавил шаги по заданию цели" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил шаги по заданию цели" />
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/telegram-api/src/main/java/ru/nn/dvm/telegram/api/service/StepAgregator.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

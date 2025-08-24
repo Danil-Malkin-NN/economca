@@ -1,5 +1,6 @@
 package ru.nn.dvm.core.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -16,7 +17,7 @@ public class TgUser {
 
     private String userName;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Target target;
 
     public TgUser(Long telegramId, String userName) {

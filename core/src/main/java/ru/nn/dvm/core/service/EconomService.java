@@ -32,7 +32,7 @@ public class EconomService {
     }
 
     public void creteTarget(Long userId, Long amount) {
-        TgUser tgUser = userRepository.findById(userId)
+        TgUser tgUser = userRepository.findByTelegramId(userId)
                 .orElseThrow(() -> new RuntimeException("TgUser not found"));
         tgUser.setTarget(new Target(amount, amount));
         userRepository.save(tgUser);

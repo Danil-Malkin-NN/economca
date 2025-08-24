@@ -1,4 +1,4 @@
-package ru.nn.dvm.telegram.api.service;
+package ru.nn.dvm.telegram.api.service.steps;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

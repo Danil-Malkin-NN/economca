@@ -1,7 +1,6 @@
 package ru.nn.dvm.telegram.api.service;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -16,7 +15,7 @@ import static ru.nn.dvm.telegram.api.enumiration.MessageType.COMMAND;
 
 @Service
 @RequiredArgsConstructor
-public class StepAgregator {
+public class StepAggregator {
 
     private final Map<String, StepService> stepServices;
 

@@ -12,11 +12,11 @@ import ru.nn.dvm.telegram.api.service.steps.StepService;
 public class BysnesLogicService {
 
 	private final EconomService economService;
-	private final StepAgregator agregator;
+	private final StepAggregator aggregator;
 
 	public SendMessage processAction(Update update) {
 
-		StepService service = agregator.getStepProcessor(update);
+		StepService service = aggregator.getStepProcessor(update);
 
 		SendMessage message = service.process(update);
 

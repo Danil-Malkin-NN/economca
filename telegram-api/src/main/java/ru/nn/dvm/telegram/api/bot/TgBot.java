@@ -5,12 +5,9 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.nn.dvm.telegram.api.config.BotProperty;
-import ru.nn.dvm.telegram.api.service.BysnesLogicService;
-
-import java.util.ArrayList;
+import ru.nn.dvm.telegram.api.service.BusinessLogicService;
 
 /**
  * Telegram bot implementation.
@@ -20,9 +17,9 @@ import java.util.ArrayList;
 public class TgBot extends TelegramLongPollingBot {
 
     private final BotProperty property;
-    private final BysnesLogicService service;
+    private final BusinessLogicService service;
 
-    public TgBot(BotProperty property, BysnesLogicService service) {
+    public TgBot(BotProperty property, BusinessLogicService service) {
         super(property.getToken());
         this.property = property;
         this.service = service;

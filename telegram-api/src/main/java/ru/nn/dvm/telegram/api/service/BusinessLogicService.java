@@ -9,7 +9,7 @@ import ru.nn.dvm.telegram.api.service.steps.StepService;
 
 @Service
 @RequiredArgsConstructor
-public class BysnesLogicService {
+public class BusinessLogicService {
 
 	private final EconomService economService;
 	private final StepAggregator aggregator;

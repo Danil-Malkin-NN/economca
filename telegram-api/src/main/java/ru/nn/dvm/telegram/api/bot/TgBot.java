@@ -9,6 +9,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.nn.dvm.telegram.api.config.BotProperty;
 import ru.nn.dvm.telegram.api.service.BusinessLogicService;
 
+import java.util.Optional;
+
 /**
  * Telegram bot implementation.
  */
@@ -31,7 +33,6 @@ public class TgBot extends TelegramLongPollingBot {
         log.info("Update: {}", update);
         log.info("End handling update with id: {}", update.getUpdateId());
 
-
         SendMessage message = service.processAction(update);
 
         sendMessage(message);
@@ -46,7 +47,9 @@ public class TgBot extends TelegramLongPollingBot {
         try {
             execute(message);
         } catch (TelegramApiException e) {
-            log.error("Failed send message to telegram. ChatId: {}", message.getChatId(), e);
+            log.error("Failed send message to telegram. ChatId: {}", Optional.ofNullable(message)
+                    .map(SendMessage::getChatId)
+                    .orElse("unknown"), e);
         }
     }
 }

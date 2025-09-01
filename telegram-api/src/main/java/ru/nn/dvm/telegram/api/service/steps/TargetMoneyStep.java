@@ -9,7 +9,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import ru.nn.dvm.core.service.EconomService;
 
-@Service("/target")
+@Service("setUpTarget")
 @RequiredArgsConstructor
 public class TargetMoneyStep implements StepService {
 

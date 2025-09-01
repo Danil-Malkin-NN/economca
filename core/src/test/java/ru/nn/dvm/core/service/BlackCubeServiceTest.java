@@ -15,8 +15,6 @@ class BlackCubeServiceTest {
 
     BlackCubeService blackCubeService = new BlackCubeService();
 
-
-
     @Test
     public void test() {
 

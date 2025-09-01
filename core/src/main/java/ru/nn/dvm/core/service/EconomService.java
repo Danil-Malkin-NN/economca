@@ -44,13 +44,12 @@ public class EconomService {
 
     }
 
-
     @Transactional
-    public long addSpending(Long userId, long amount) {
+    public long addSpending(Long userId, Spending spending) {
         Target byUserId = targetRepository.findByTgUserId(userId);
-        byUserId.setResiduum(byUserId.getResiduum() - amount);
+        byUserId.setResiduum(byUserId.getResiduum() - spending.getCount());
         targetRepository.save(byUserId);
-        spendingRepository.save(new Spending(amount, LocalDateTime.now()));
+        spendingRepository.save(spending);
 
         return getAvailableMoneyForDeny(userId);
     }

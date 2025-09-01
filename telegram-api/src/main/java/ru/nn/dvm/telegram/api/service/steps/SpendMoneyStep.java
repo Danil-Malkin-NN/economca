@@ -11,6 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import ru.nn.dvm.core.service.EconomService;
+import ru.nn.dvm.telegram.api.service.NextStepService;
 import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class SpendMoneyStep implements StepService {
 
     private final EconomService economService;
     private final SaleBuffer buffer;
+    private final NextStepService nextStepService;
 
     private final String textMessage = "Выберете категорию траты";
 
@@ -59,8 +61,9 @@ public class SpendMoneyStep implements StepService {
         replyMarkup.setKeyboard(getNextStepsButtons());
         answer.setReplyMarkup(replyMarkup);
 
-        return answer;
+        nextStepService.setNextStep(from.getId(), "setAmount");
 
+        return answer;
     }
 
     private @NonNull List<List<InlineKeyboardButton>> getNextStepsButtons() {

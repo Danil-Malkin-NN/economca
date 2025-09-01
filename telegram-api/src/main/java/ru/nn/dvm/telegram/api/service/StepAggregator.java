@@ -54,7 +54,7 @@ public class StepAggregator {
                     .map(User::getId);
             if(id.isPresent()) {
                 if(nextStepService.containsKey(id.get())) {
-                    stepServices.get(nextStepService.get(id.get()));
+                    return stepServices.get(nextStepService.get(id.get()));
                 }
             }
 

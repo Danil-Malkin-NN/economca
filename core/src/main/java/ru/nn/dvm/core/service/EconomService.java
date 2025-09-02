@@ -9,7 +9,7 @@ import ru.nn.dvm.core.repository.SpendingRepository;
 import ru.nn.dvm.core.repository.TargetRepository;
 import ru.nn.dvm.core.repository.UserRepository;
 
-import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class EconomService {
@@ -34,24 +34,25 @@ public class EconomService {
     public void creteTarget(Long userId, Long amount) {
         TgUser tgUser = userRepository.findByTelegramId(userId)
                 .orElseThrow(() -> new RuntimeException("TgUser not found"));
-        tgUser.setTarget(new Target(amount, amount));
+        tgUser.setTarget(new Target(amount, amount, tgUser));
         userRepository.save(tgUser);
     }
 
     public int getAvailableMoneyForDeny(Long userId) {
         Target byUserId = targetRepository.findByTgUserId(userId);
         return blackCubeService.getManeyForDay(byUserId);
-
     }
 
     @Transactional
     public long addSpending(Long userId, Spending spending) {
-        Target byUserId = targetRepository.findByTgUserId(userId);
+        TgUser byTelegramId = userRepository.findByTelegramId(userId)
+                .orElseThrow(() -> new RuntimeException("NOT FOUND"));
+        Target byUserId = byTelegramId.getTarget();
         byUserId.setResiduum(byUserId.getResiduum() - spending.getCount());
         targetRepository.save(byUserId);
         spendingRepository.save(spending);
 
-        return getAvailableMoneyForDeny(userId);
+        return blackCubeService.getManeyForDay(byUserId);
     }
 
 }

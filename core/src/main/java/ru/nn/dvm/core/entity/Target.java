@@ -19,9 +19,10 @@ public class Target {
     @OneToOne
     private TgUser tgUser;
 
-    public Target(long target, long residuum) {
+    public Target(long target, long residuum, TgUser tgUser) {
         this.target = target;
         this.residuum = residuum;
+        this.tgUser = tgUser;
     }
 
     public Target() {

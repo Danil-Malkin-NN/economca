@@ -33,6 +33,6 @@ public class NextStepService {
 
     public String get(Long aLong) {
         return nextStep.get(aLong)
-                .peek();
+                .poll();
     }
 }

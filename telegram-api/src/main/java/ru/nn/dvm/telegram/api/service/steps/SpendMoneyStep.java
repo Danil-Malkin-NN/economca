@@ -46,9 +46,6 @@ public class SpendMoneyStep implements StepService {
         Message message = update.getMessage();
         User from = message.getFrom();
 
-//        buffer.getSpendings()
-//                .put(from.getId(), );
-
         SendMessage answer = new SendMessage();
         answer.setText(textMessage);
         //TODO NPE!!!
@@ -61,7 +58,7 @@ public class SpendMoneyStep implements StepService {
         replyMarkup.setKeyboard(getNextStepsButtons());
         answer.setReplyMarkup(replyMarkup);
 
-        nextStepService.setNextStep(from.getId(), "setAmount");
+        nextStepService.setNextStep(from.getId(), "HauManySendStep");
 
         return answer;
     }

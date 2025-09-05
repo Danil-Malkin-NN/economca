@@ -22,19 +22,29 @@ public class BlackCubeService {
         clock = Clock.systemDefaultZone(); // текущая зона сервера
     }
 
-    public int getManeyForDay(Target byUserId) {
+    public Long getManeyForDay(Target byUserId) {
+        return getManeyForMonth(byUserId.getResiduum());
+    }
 
+    private long getDays() {
         LocalDateTime now = LocalDateTime.now(clock);
         YearMonth yearMonth = YearMonth.from(now);
         int daysInMonth = yearMonth.lengthOfMonth();
 
         long days = daysInMonth - now
                 .getDayOfMonth();
-        if (days == 0) {
-            return (int) byUserId.getResiduum();
+        return days;
+    }
+
+    public long getManeyForMonth(Long targetCount) {
+        long days = getDays();
+        if(days == 0) {
+            return targetCount;
         }
-        return BigDecimal.valueOf(byUserId.getResiduum())
+
+        return BigDecimal.valueOf(targetCount)
                 .divide(BigDecimal.valueOf(days), 0, RoundingMode.DOWN)
                 .intValue();
+
     }
 }

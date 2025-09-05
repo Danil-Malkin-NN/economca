@@ -34,11 +34,11 @@ public class EconomService {
     public void creteTarget(Long userId, Long amount) {
         TgUser tgUser = userRepository.findByTelegramId(userId)
                 .orElseThrow(() -> new RuntimeException("TgUser not found"));
-        tgUser.setTarget(new Target(amount, amount, tgUser));
+        tgUser.setTarget(new Target(amount, amount, tgUser, blackCubeService.getManeyForMonth(amount)));
         userRepository.save(tgUser);
     }
 
-    public int getAvailableMoneyForDeny(Long userId) {
+    public long getAvailableMoneyForDeny(Long userId) {
         Target byUserId = targetRepository.findByTgUserId(userId);
         return blackCubeService.getManeyForDay(byUserId);
     }
@@ -48,11 +48,11 @@ public class EconomService {
         TgUser byTelegramId = userRepository.findByTelegramId(userId)
                 .orElseThrow(() -> new RuntimeException("NOT FOUND"));
         Target byUserId = byTelegramId.getTarget();
-        byUserId.setResiduum(byUserId.getResiduum() - spending.getCount());
+        byUserId.setDayleResiduum(byUserId.getDayleResiduum() - spending.getCount());
         targetRepository.save(byUserId);
         spendingRepository.save(spending);
 
-        return blackCubeService.getManeyForDay(byUserId);
+        return byUserId.getDayleResiduum();
     }
 
 }

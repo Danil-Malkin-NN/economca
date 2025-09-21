@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nzfk-backend
+  name: nzfk-backend
+spec:
+  selector:
+    matchLabels:
+      app: economca
+  template:
+    metadata:
+      labels:
+        app: economca
+    spec:
+      containers:
+        - image: danilmalkinnn/economca-tg:latest
+          imagePullPolicy: Always
+          name: economca
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: PG_USER
+              valueFrom:
+                secretKeyRef:
+                  name: economca-db-secret
+                  key: postgres-username
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: economca-db-secret
+                  key: postgres-password
+            - name: PG_URL
+              value: postgres-deployment-economca:5432
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment-economca
+  namespace: economca
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: dockerhub.timeweb.cloud/postgres:17.6
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_DB
+              value: postgres
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: password
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgres-storage
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: postgres-bar
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  namespace: my-bar
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: economca
+  name: economca-db-secret
+type: Opaque
+data:
+  password: cG9zdGdyZXM=
+# Используйте команду `echo -n 'yourpassword' | base64` для создания этого значения
+#  password: postgres
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: economca-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/var/economca/data"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: economca-volume-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---

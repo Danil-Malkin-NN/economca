@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nzfk-backend
-  name: nzfk-backend
+    app: economca-backend
+  name: economca-backend
+  namespace: economca
 spec:
   selector:
     matchLabels:
@@ -22,6 +23,12 @@ spec:
               containerPort: 8080
               protocol: TCP
           env:
+            - name: BOT_NAME
+              value: economca
+
+            - name: BOT_TOKEN
+              value: "8320437220:AAHagPcX66h7-k33IAb5zfw1GjXbK3cXrPE"
+
             - name: PG_USER
               valueFrom:
                 secretKeyRef:
@@ -31,7 +38,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: economca-db-secret
-                  key: postgres-password
+                  key: password
             - name: PG_URL
               value: postgres-deployment-economca:5432
 ---
@@ -41,7 +48,6 @@ metadata:
   name: postgres-deployment-economca
   namespace: economca
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: postgres
@@ -63,7 +69,7 @@ spec:
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: postgres-secret
+                  name: economca-db-secret
                   key: password
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
@@ -71,13 +77,13 @@ spec:
       volumes:
         - name: postgres-storage
           persistentVolumeClaim:
-            claimName: postgres-bar
+            claimName: economca-volume-claim
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres-service
-  namespace: my-bar
+  name: postgres-service-economca
+  namespace: economca
 spec:
   selector:
     app: postgres
@@ -97,12 +103,14 @@ metadata:
 type: Opaque
 data:
   password: cG9zdGdyZXM=
+  postgres-username: postgres
 # Используйте команду `echo -n 'yourpassword' | base64` для создания этого значения
 #  password: postgres
 ---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
+  namespace: economca
   name: economca-volume
   labels:
     type: local
@@ -118,6 +126,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: economca
   name: economca-volume-claim
 spec:
   storageClassName: manual

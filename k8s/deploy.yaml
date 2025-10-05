@@ -15,7 +15,7 @@ spec:
         app: economca
     spec:
       containers:
-        - image: danilmalkinnn/economca-tg:0.0.2
+        - image: danilmalkinnn/economca-tg:0.0.3
           imagePullPolicy: Always
           name: economca
           ports:
@@ -40,7 +40,7 @@ spec:
                   name: economca-db-secret
                   key: password
             - name: PG_URL
-              value: postgres-deployment-economca:5432
+              value: postgres-service-economca:5432
 ---
 apiVersion: apps/v1
 kind: Deployment

@@ -1,4 +1,4 @@
-package ru.nn.dvm.telegram.api.service.steps;
+package ru.nn.dvm.telegram.api.service.steps.registry;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import ru.nn.dvm.core.service.EconomService;
+import ru.nn.dvm.telegram.api.service.steps.StepService;
 
 @Service("setUpTarget")
 @RequiredArgsConstructor

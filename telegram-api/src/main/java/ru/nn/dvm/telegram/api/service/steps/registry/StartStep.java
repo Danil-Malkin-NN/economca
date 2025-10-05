@@ -1,4 +1,4 @@
-package ru.nn.dvm.telegram.api.service.steps;
+package ru.nn.dvm.telegram.api.service.steps.registry;
 
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import ru.nn.dvm.core.service.EconomService;
+import ru.nn.dvm.telegram.api.service.steps.StepService;
 
 import java.util.ArrayList;
 import java.util.List;

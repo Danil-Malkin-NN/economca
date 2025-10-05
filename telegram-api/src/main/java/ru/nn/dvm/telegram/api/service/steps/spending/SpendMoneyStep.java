@@ -1,4 +1,4 @@
-package ru.nn.dvm.telegram.api.service.steps;
+package ru.nn.dvm.telegram.api.service.steps.spending;
 
 import jakarta.annotation.PostConstruct;
 import lombok.AllArgsConstructor;
@@ -12,6 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import ru.nn.dvm.core.service.EconomService;
 import ru.nn.dvm.telegram.api.service.NextStepService;
+import ru.nn.dvm.telegram.api.service.steps.StepService;
 import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 
 import java.util.ArrayList;

@@ -75,6 +75,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <imageName>danilmalkinnn/economca-tg:${version}</imageName>
+                    <createdDate></createdDate>
                 </configuration>
             </plugin>
             <plugin>

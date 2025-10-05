@@ -5,12 +5,12 @@
     <parent>
         <groupId>ru.nn.dvm</groupId>
         <artifactId>dependencybom</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
         <relativePath>../dependencybom/pom.xml</relativePath>
     </parent>
 
     <artifactId>telegram-api</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3</version>
     <name>telegram-api</name>
     <description>telegram-api</description>
     <packaging>jar</packaging>
@@ -74,7 +74,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <imageName>danilmalkinnn/economca-tg</imageName>
+                    <imageName>danilmalkinnn/economca-tg:${version}</imageName>
                 </configuration>
             </plugin>
             <plugin>

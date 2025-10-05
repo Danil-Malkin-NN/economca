@@ -28,11 +28,11 @@ class BlackCubeServiceTest {
         Target target = new Target();
         target.setResiduum(310); // например
 
-        int result = blackCubeService.getManeyForDay(target);
+        long result = blackCubeService.getManeyForDay(target);
 
         // В марте 31 день, сейчас 10 число → осталось 21 день
         // 310 / 21 ≈ 14
-        assertThat(result).isEqualTo(14);
+        assertThat(result).isEqualTo(14L);
 
     }
 

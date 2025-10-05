@@ -15,7 +15,7 @@ spec:
         app: economca
     spec:
       containers:
-        - image: danilmalkinnn/economca-tg:latest
+        - image: danilmalkinnn/economca-tg:0.0.2
           imagePullPolicy: Always
           name: economca
           ports:
@@ -103,7 +103,7 @@ metadata:
 type: Opaque
 data:
   password: cG9zdGdyZXM=
-  postgres-username: postgres
+  postgres-username: cG9zdGdyZXM=
 # Используйте команду `echo -n 'yourpassword' | base64` для создания этого значения
 #  password: postgres
 ---

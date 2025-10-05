@@ -19,6 +19,7 @@ public class AmountStep implements StepService {
     private final SaleBuffer saleBuffer;
 
     private final String textMessage = """
+            Общий остаток = %RESIDUUM%
             Дневной остаток = %DAY%
             """;
 
@@ -28,17 +29,21 @@ public class AmountStep implements StepService {
         Message message = update.getMessage();
         User from = message.getFrom();
 
+        Long userTgId = from.getId();
         Spending spending = saleBuffer.getSpendings()
-                .get(from.getId());
+                .get(userTgId);
         spending.setCount(Long.parseLong(message.getText()));
 
-        long l = economService.addSpending(from.getId(), spending);
+        long l = economService.addSpending(userTgId, spending);
 
 //        buffer.getSpendings()
 //                .put(from.getId(), );
 
         SendMessage answer = new SendMessage();
-        answer.setText(textMessage.replace("%DAY%", String.valueOf(l)));
+        String resultMessage = textMessage.replace("%DAY%", String.valueOf(l))
+                .replace("%RESIDUUM%", String.valueOf(economService.getTarget(userTgId)));
+
+        answer.setText(resultMessage);
         //TODO NPE!!!
         answer.setChatId(update.getMessage()
                                  .getChatId());

@@ -31,6 +31,10 @@ public class EconomService {
         userRepository.save(new TgUser(telegramId, username));
     }
 
+    public Target getTarget(Long telegramId) {
+        return targetRepository.findByTgUserId(telegramId);
+    }
+
     public void creteTarget(Long userId, Long amount) {
         TgUser tgUser = userRepository.findByTelegramId(userId)
                 .orElseThrow(() -> new RuntimeException("TgUser not found"));
@@ -49,6 +53,7 @@ public class EconomService {
                 .orElseThrow(() -> new RuntimeException("NOT FOUND"));
         Target byUserId = byTelegramId.getTarget();
         byUserId.setDayleResiduum(byUserId.getDayleResiduum() - spending.getCount());
+        byUserId.setResiduum(byUserId.getResiduum() - spending.getCount());
         targetRepository.save(byUserId);
         spendingRepository.save(spending);
 

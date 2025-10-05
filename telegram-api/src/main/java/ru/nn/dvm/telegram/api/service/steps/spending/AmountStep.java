@@ -34,14 +34,14 @@ public class AmountStep implements StepService {
                 .get(userTgId);
         spending.setCount(Long.parseLong(message.getText()));
 
-        long l = economService.addSpending(userTgId, spending);
+        long newDayleLimit = economService.addSpending(userTgId, spending);
 
 //        buffer.getSpendings()
 //                .put(from.getId(), );
 
         SendMessage answer = new SendMessage();
-        String resultMessage = textMessage.replace("%DAY%", String.valueOf(l))
-                .replace("%RESIDUUM%", String.valueOf(economService.getTarget(userTgId)));
+        String resultMessage = textMessage.replace("%DAY%", String.valueOf(newDayleLimit))
+                .replace("%RESIDUUM%", String.valueOf(economService.getTarget(userTgId).getResiduum()));
 
         answer.setText(resultMessage);
         //TODO NPE!!!

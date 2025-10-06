@@ -9,8 +9,6 @@ import ru.nn.dvm.core.repository.SpendingRepository;
 import ru.nn.dvm.core.repository.TargetRepository;
 import ru.nn.dvm.core.repository.UserRepository;
 
-import java.util.Optional;
-
 @Service
 public class EconomService {
 
@@ -32,7 +30,7 @@ public class EconomService {
     }
 
     public Target getTarget(Long telegramId) {
-        return targetRepository.findByTgUserId(telegramId);
+        return targetRepository.findByTgUser_TelegramId(telegramId);
     }
 
     public void creteTarget(Long userId, Long amount) {
@@ -43,7 +41,7 @@ public class EconomService {
     }
 
     public long getAvailableMoneyForDeny(Long userId) {
-        Target byUserId = targetRepository.findByTgUserId(userId);
+        Target byUserId = targetRepository.findByTgUser_TelegramId(userId);
         return blackCubeService.getManeyForDay(byUserId);
     }
 

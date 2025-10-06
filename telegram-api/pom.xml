@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>telegram-api</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <name>telegram-api</name>
     <description>telegram-api</description>
     <packaging>jar</packaging>

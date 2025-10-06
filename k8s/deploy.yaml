@@ -15,7 +15,7 @@ spec:
         app: economca
     spec:
       containers:
-        - image: danilmalkinnn/economca-tg:0.0.3
+        - image: danilmalkinnn/economca-tg:0.0.4
           imagePullPolicy: Always
           name: economca
           ports:

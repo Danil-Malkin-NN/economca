@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="create-tg_user:1" author="your-name">
+        <createTable tableName="tg_user">
+            <column name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="telegram_id" type="BIGINT">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-spending:2" author="your-name">
+        <createTable tableName="spending">
+            <column name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="count" type="BIGINT"/>
+            <column name="category" type="VARCHAR(255)"/>
+            <column name="date" type="TIMESTAMP" defaultValueComputed="NOW()"/>
+            <column name="tg_user_id" type="BIGINT">
+                <constraints nullable="true" foreignKeyName="FK_SPENDING_ON_TGUSER" references="tg_user(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-target:3" author="your-name">
+        <createTable tableName="target">
+            <column name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="target" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="residuum" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dayle_residuum" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tg_user_id" type="BIGINT">
+                <constraints nullable="true" foreignKeyName="FK_TARGET_ON_TGUSER" references="tg_user(id)"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

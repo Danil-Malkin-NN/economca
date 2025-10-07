@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog>
+
+    <createTable tableName="notification">
+        <column name="id"
+                type="BIGSERIAL">
+            <constraints nullable="false"
+                         primaryKey="true"
+                         primaryKeyName="pk_notification"/>
+        </column>
+        <column name="dayli_money_recalculate_notification"
+                type="DATETIME"/>
+        <column name="tg_user_id"
+                type="BIGINT" >
+            <constraints nullable="true" foreignKeyName="FK_NOTIFICATION_ON_TGUSER" references="tg_user(id)"/>
+        </column>
+    </createTable>
+
+</databaseChangeLog>

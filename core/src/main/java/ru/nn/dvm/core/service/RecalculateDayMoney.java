@@ -24,7 +24,7 @@ public class RecalculateDayMoney {
         recalculateDayMoney();
     }
 
-
+//    Добавить отправку оповещений о новых лимитах
     public void recalculateDayMoney() {
         List<Target> all = targetRepository.findAll();
         for (Target target : all) {

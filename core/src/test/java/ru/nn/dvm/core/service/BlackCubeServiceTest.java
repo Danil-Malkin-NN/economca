@@ -1,7 +1,6 @@
 package ru.nn.dvm.core.service;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.test.context.ActiveProfiles;
 import ru.nn.dvm.core.entity.Target;
 
 import java.time.Clock;
@@ -9,7 +8,6 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class BlackCubeServiceTest {
 
@@ -28,7 +26,7 @@ class BlackCubeServiceTest {
         Target target = new Target();
         target.setResiduum(310); // например
 
-        long result = blackCubeService.getManeyForDay(target);
+        long result = blackCubeService.getMoneyForDay(target);
 
         // В марте 31 день, сейчас 10 число → осталось 21 день
         // 310 / 21 ≈ 14

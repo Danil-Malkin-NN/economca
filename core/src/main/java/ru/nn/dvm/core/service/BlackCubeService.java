@@ -22,7 +22,7 @@ public class BlackCubeService {
         clock = Clock.systemDefaultZone(); // текущая зона сервера
     }
 
-    public Long getManeyForDay(Target byUserId) {
+    public Long getMoneyForDay(Target byUserId) {
         return getManeyForMonth(byUserId.getResiduum());
     }
 

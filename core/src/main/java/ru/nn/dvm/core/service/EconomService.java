@@ -42,7 +42,7 @@ public class EconomService {
 
     public long getAvailableMoneyForDeny(Long userId) {
         Target byUserId = targetRepository.findByTgUser_TelegramId(userId);
-        return blackCubeService.getManeyForDay(byUserId);
+        return blackCubeService.getMoneyForDay(byUserId);
     }
 
     @Transactional

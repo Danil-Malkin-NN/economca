@@ -23,7 +23,6 @@ public class RecalculateCommand implements StepService {
     @Transactional
     public SendMessage process(Update update) {
 
-
         TgUser byTelegramId = userRepository.findByTelegramId(update.getMessage()
                                                                       .getFrom()
                                                                       .getId())

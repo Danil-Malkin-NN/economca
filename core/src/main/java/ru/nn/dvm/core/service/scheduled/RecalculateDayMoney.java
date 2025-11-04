@@ -1,4 +1,4 @@
-package ru.nn.dvm.core.service;
+package ru.nn.dvm.core.service.scheduled;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.nn.dvm.core.entity.Target;
 import ru.nn.dvm.core.repository.TargetRepository;
+import ru.nn.dvm.core.service.BlackCubeService;
 
 import java.util.List;
 

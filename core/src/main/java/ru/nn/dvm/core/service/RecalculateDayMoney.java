@@ -19,7 +19,7 @@ public class RecalculateDayMoney {
     private final BlackCubeService blackCubeService;
 
     @Transactional
-    @Scheduled(cron = "0 0 0 * * *")
+    @Scheduled(cron = "0 10 0 * * *")
     public void enabledSchedule() {
         recalculateDayMoney();
     }

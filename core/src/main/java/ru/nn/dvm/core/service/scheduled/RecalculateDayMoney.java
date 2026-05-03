@@ -11,6 +11,9 @@ import ru.nn.dvm.core.service.BlackCubeService;
 
 import java.util.List;
 
+/**
+ * Ежедневный пересчёт поля дневного остатка ({@link Target#getDayleResiduum()}) для всех целей через {@link BlackCubeService}.
+ */
 @EnableScheduling
 @Service
 @RequiredArgsConstructor

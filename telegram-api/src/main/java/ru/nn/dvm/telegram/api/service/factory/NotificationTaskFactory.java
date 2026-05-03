@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 import ru.nn.dvm.core.entity.Notification;
 import ru.nn.dvm.core.entity.TgUser;
 
+/**
+ * Создание задач для отложенного уведомления пользователя (логика отправки в разработке).
+ */
 @Service
 @RequiredArgsConstructor
 public class NotificationTaskFactory {

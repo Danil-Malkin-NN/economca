@@ -10,7 +10,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import ru.nn.dvm.telegram.api.bot.TgBot;
 
 /**
- * Class bot registration.
+ * Регистрация {@link TgBot} в {@link TelegramBotsApi} (отключено для профиля {@code test}).
  */
 @Configuration
 @Profile("!test")

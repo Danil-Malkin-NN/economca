@@ -7,6 +7,10 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Месячная финансовая цель пользователя: целевая сумма, остаток на месяц и дневной лимит.
+ * Связана один-к-одному с {@link TgUser}.
+ */
 @Entity
 @Getter
 @Setter

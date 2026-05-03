@@ -10,6 +10,9 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import ru.nn.dvm.core.service.EconomService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 
+/**
+ * Ввод суммы цели после {@link SetupTargetStep}; создаёт {@link ru.nn.dvm.core.entity.Target} через {@link ru.nn.dvm.core.service.EconomService}.
+ */
 @Service("setUpTarget")
 @RequiredArgsConstructor
 public class TargetMoneyStep implements StepService {

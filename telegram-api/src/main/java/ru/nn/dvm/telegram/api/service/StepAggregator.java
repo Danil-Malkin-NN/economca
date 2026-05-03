@@ -15,6 +15,9 @@ import java.util.Optional;
 
 import static ru.nn.dvm.telegram.api.enumiration.MessageType.COMMAND;
 
+/**
+ * Определяет, какой {@link StepService} обработает обновление: команда, текст, callback или ожидающий шаг из {@link NextStepService}.
+ */
 @Service
 @RequiredArgsConstructor
 public class StepAggregator {

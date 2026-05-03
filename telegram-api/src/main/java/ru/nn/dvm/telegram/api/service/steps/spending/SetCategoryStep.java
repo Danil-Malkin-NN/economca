@@ -11,6 +11,9 @@ import ru.nn.dvm.telegram.api.service.NextStepService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 
+/**
+ * Обработка выбора категории (callback): черновик траты в {@link SaleBuffer}, запрос суммы.
+ */
 @Service("setCategory")
 @AllArgsConstructor
 public class SetCategoryStep implements StepService {

@@ -6,6 +6,9 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 
+/**
+ * Фасад обработки входящих обновлений: выбор {@link StepService} через {@link StepAggregator}.
+ */
 @Service
 @RequiredArgsConstructor
 public class BusinessLogicService {

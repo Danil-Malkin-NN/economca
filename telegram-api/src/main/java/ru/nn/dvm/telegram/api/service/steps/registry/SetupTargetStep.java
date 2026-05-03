@@ -8,6 +8,9 @@ import ru.nn.dvm.core.service.EconomService;
 import ru.nn.dvm.telegram.api.service.NextStepService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 
+/**
+ * Команда {@code /add_target}: запрос суммы месячной цели и постановка шага {@code setUpTarget}.
+ */
 @Service(value = "/add_target")
 @RequiredArgsConstructor
 public class SetupTargetStep implements StepService {

@@ -6,6 +6,9 @@ import ru.nn.dvm.core.entity.TgUser;
 
 import java.util.Optional;
 
+/**
+ * Доступ к сущностям {@link ru.nn.dvm.core.entity.TgUser} по идентификатору Telegram.
+ */
 @Repository
 public interface UserRepository extends JpaRepository<TgUser, Long> {
 

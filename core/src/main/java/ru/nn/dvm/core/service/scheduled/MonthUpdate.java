@@ -8,6 +8,9 @@ import ru.nn.dvm.core.repository.TargetRepository;
 
 import java.util.List;
 
+/**
+ * Плановое обновление в начале месяца: для всех {@link Target} месячный остаток приводится к целевой сумме.
+ */
 @Slf4j
 @Service
 public class MonthUpdate {

@@ -12,6 +12,9 @@ import ru.nn.dvm.core.repository.UserRepository;
 import ru.nn.dvm.core.service.BlackCubeService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 
+/**
+ * Команда {@code /recalculate}: пересчёт дневного остатка для цели пользователя через {@link ru.nn.dvm.core.service.BlackCubeService}.
+ */
 @Service("/recalculate")
 @RequiredArgsConstructor
 public class RecalculateCommand implements StepService {

@@ -11,6 +11,9 @@ import ru.nn.dvm.core.service.EconomService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 
+/**
+ * Финальный шаг траты: сумма из сообщения, {@link ru.nn.dvm.core.service.EconomService#addSpending} и ответ с остатками.
+ */
 @Service("final_spending")
 @RequiredArgsConstructor
 public class AmountStep implements StepService {

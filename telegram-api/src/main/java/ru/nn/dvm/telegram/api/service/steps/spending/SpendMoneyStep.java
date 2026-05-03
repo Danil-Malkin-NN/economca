@@ -18,6 +18,9 @@ import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Команда {@code /add_spending}: выбор категории траты (inline-кнопки), переход к шагу {@link HauManySendStep}.
+ */
 @Service("/add_spending")
 @AllArgsConstructor
 public class SpendMoneyStep implements StepService {

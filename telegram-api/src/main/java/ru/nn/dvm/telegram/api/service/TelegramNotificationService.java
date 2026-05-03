@@ -12,6 +12,9 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Заготовка сервиса планирования персональных уведомлений по настройкам {@link ru.nn.dvm.core.entity.Notification}.
+ */
 @Service
 public class TelegramNotificationService {
 

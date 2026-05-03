@@ -9,6 +9,9 @@ import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Пользователь Telegram: идентификатор в мессенджере и опциональная связь с {@link Target}.
+ */
 @Setter
 @Getter
 @Entity

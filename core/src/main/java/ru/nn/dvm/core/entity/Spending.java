@@ -6,10 +6,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+/**
+ * Запись о трате: сумма, категория, момент времени и владелец {@link TgUser}.
+ */
 @Entity
 @Getter
 @Setter

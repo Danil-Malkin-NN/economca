@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * Точка входа приложения: Telegram-бот, JPA по модулю {@code core}, планировщик задач.
+ */
 @EnableScheduling
 @EnableJpaRepositories(basePackages = "ru.nn.dvm.core")
 @EntityScan(basePackages = "ru.nn.dvm.core.entity")

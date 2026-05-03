@@ -12,7 +12,7 @@ import ru.nn.dvm.telegram.api.service.BusinessLogicService;
 import java.util.Optional;
 
 /**
- * Telegram bot implementation.
+ * Telegram-бот на long polling: передаёт {@link Update} в {@link BusinessLogicService} и отправляет ответ.
  */
 @Slf4j
 @Component

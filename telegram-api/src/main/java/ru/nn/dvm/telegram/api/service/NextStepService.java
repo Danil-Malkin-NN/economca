@@ -7,6 +7,9 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+/**
+ * Очередь имён следующих шагов (Spring-бинов {@link ru.nn.dvm.telegram.api.service.steps.StepService}) по {@code telegramId}.
+ */
 @Service
 public class NextStepService {
 

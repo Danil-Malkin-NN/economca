@@ -8,10 +8,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+/**
+ * Настройки уведомления пользователя (время ежедневного напоминания о пересчёте дневного лимита).
+ */
 @Entity
 @Getter
 @Setter

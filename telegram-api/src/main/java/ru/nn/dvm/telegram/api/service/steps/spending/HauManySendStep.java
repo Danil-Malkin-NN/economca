@@ -11,6 +11,9 @@ import ru.nn.dvm.telegram.api.service.NextStepService;
 import ru.nn.dvm.telegram.api.service.steps.StepService;
 import ru.nn.dvm.telegram.api.service.storage.SaleBuffer;
 
+/**
+ * После выбора категории в {@link SpendMoneyStep}: сохранение категории в буфер и переход к {@link AmountStep} ({@code final_spending}).
+ */
 @Service("HauManySendStep")
 @AllArgsConstructor
 public class HauManySendStep implements StepService {

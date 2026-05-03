@@ -15,6 +15,9 @@ import ru.nn.dvm.telegram.api.service.steps.StepService;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Команда {@code /start}: регистрация пользователя и приветствие с кнопкой добавления цели.
+ */
 @Service(value = "/start")
 @RequiredArgsConstructor
 public class StartStep implements StepService {

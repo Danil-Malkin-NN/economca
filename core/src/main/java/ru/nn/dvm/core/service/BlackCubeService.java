@@ -9,6 +9,9 @@ import java.time.Clock;
 import java.time.LocalDateTime;
 import java.time.YearMonth;
 
+/**
+ * Расчёт дневной доступной суммы из остатка до конца календарного месяца (по {@link Clock}).
+ */
 @Service
 public class BlackCubeService {
 

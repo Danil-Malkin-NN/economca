@@ -12,10 +12,11 @@ import ru.nn.dvm.core.repository.SpendingRepository;
 import ru.nn.dvm.core.repository.TargetRepository;
 import ru.nn.dvm.core.repository.UserRepository;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+/**
+ * Сервис доменной логики бюджета: пользователи, цели, траты и уведомления по умолчанию.
+ */
 @Service
 @RequiredArgsConstructor
 public class EconomService {
